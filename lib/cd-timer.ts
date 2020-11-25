@@ -150,8 +150,8 @@ export class CdTimerComponent implements AfterViewInit, OnDestroy {
     if (this.format === 'user') {
       // User presentation
       const items = {
-        'seconds': this.seconds,
-        'minutes': this.minutes,
+        'seconds': this.seconds.toString().padStart(2, '0'),
+        'minutes': this.minutes.toString().padStart(2, '0'),
         'hours': this.hours,
         'days': this.days
       };
